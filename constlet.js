@@ -1,7 +1,8 @@
-let _month=6;
-let _study='피그마'
-let _name='홍길동'
-// ''경우 ; 신경쓰지않음.
-const myword=`저는 ${_month}개월간 ${_study} 공부를 한 ${_name}입니다.`;
-// +언더바를 자주 사용함. 
-console.log(myword);
+let _month=['2', '3', '7']
+let _study=['피그마','뷰','리액트']  // 순서대로 0, 1, 2..
+let _name=['홍길동', '나훈아', '조명섭']
+
+const myword0=`저는 ${_month[0]}개월간 ${_study[0]} 공부를 한 ${_name[0]}입니다.`; // ->리액트가 나간다.
+const myword1=`저는 ${_month[1]}개월간 ${_study[1]} 공부를 한 ${_name[1]}입니다.`;
+const myword2=`저는 ${_month[2]}개월간 ${_study[2]} 공부를 한 ${_name[2]}입니다.`;
+console.log(myword0, myword1, myword2 );
