@@ -6,7 +6,7 @@ const myarr=[
     ["구글", "http://www.google.com"]
 ]
 
-console.groupCollapsed("첫번째 배열", myarr[0], typeof myarr[0], "첫번째배열의 첫번째 값", myarr[0][0], typeof myarr[0][0])
+console.log("첫번째 배열", myarr[0], typeof myarr[0], "첫번째배열의 첫번째 값", myarr[0][0], typeof myarr[0][0])
 //원래는 typeof myarr[0]가 본 언어이다. ()붙이면 에러날 수도 있음.
 //console.groupCollapsed("첫번째 배열", myarr[0], typeof(myarr[0]), "첫번째배열의 첫번째 값", myarr[0][0], typeof(myarr[0][0]))
 
