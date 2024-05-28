@@ -1,9 +1,21 @@
-let _month=[2, 3, 7]
-// 주의, 숫자는 ''을 붙이지 않는다!!!
-let _study=['피그마','뷰','리액트']  // 순서대로 0, 1, 2..
-let _name=['홍길동', '나훈아', '조명섭']
+//다중 array
 
-const myword0=`저는 ${_month[0]}개월간 ${_study[0]} 공부를 한 ${_name[0]}입니다.`; // ->리액트가 나간다.
-const myword1=`저는 ${_month[1]}개월간 ${_study[1]} 공부를 한 ${_name[1]}입니다.`;
-const myword2=`저는 ${_month[2]}개월간 ${_study[2]} 공부를 한 ${_name[2]}입니다.`;
-console.log(myword0, myword1, myword2 );
+const myarr=[
+    ["네이버", "http://www.naver.com"],
+    ["다음", "http://www.daum.net"],
+    ["구글", "http://www.google.com"]
+]
+
+console.groupCollapsed("첫번째 배열", myarr[0], typeof myarr[0], "첫번째배열의 첫번째 값", myarr[0][0], typeof myarr[0][0])
+//원래는 typeof myarr[0]가 본 언어이다. ()붙이면 에러날 수도 있음.
+//console.groupCollapsed("첫번째 배열", myarr[0], typeof(myarr[0]), "첫번째배열의 첫번째 값", myarr[0][0], typeof(myarr[0][0]))
+
+
+console.log(`<a href='${myarr[0][1]}'>${myarr[0][0]}</>`)
+// console.log("<a href='http://www.naver.com'>네이버</>") 
+// ${myarr[0][1]}는 [0]는 myarr의 3개중 0번째이고 그 다음으로 오는 [1]는 ["네이버", "http://www.naver.com"],에서 1번째 순서인 링크가 오는 것이다.
+
+console.log(`<a href='${myarr[1][1]}'>${myarr[1][0]}</>`)
+console.log(`<a href='${myarr[2][1]}'>${myarr[2][0]}</>`)
+
+
