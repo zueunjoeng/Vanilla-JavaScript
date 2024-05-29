@@ -7,35 +7,16 @@ for(var i = 0; i < 5; i++ ){
     console.log("나는 다섯번 실행되지");
 }
 
-// let count=10;
-// count++; // count +=1 : 1을 추가로 넣는다 <-> ++count 
-// count++; //다음연산에 1씩 추가증가하겠다. (그래서 여기는 10)
-// count; // (그럼 얘는 11)
-// ++count;// 얘는 12. ++가 앞에 붙으면 지금의 나에게
-//count++ =>12 맞아.
-//count +=1 // 얘는 12에 1이 추가된거라 13이지
-//지금의 나에게는 상관없고 다음의 나에게 전달하는 => 후치연산
+//문자 연산식
+let mystudy ="리액트";
+    mystudy ="리액트" + "뷰"; // mystudy +="뷰"
 
-let count =10;
-    count +=100;
-    count +=1; //111 //주의할 점 : +가 빠지면 count=1; 되기떄문에 다시 1부터 연산이 시작된다.
-    ++count; //112
-    count++; //112
+    console.log(mystudy);
 
-    console.log(count); //113
+let startjs =10;
+    startjs +=10; //20
+    startjs +="원"; // 원이 붙으면 문자연산이 된다.(한번이라도 글자가 붙으면 그 뒤로는 문자연산)
+    startjs +=100; // -> 20원100
+    startjs +=100; // ->20원100100
 
-
-let counting =10;
-    counting -=100; //-90
-    counting -=1; //1 //-= 라면 -91이 된다.
-    --counting; //0  //-92
-    counting--; //0  //-92
-
-    console.log(counting); //-1 //-93
-
-    
-let multy = 10;
-    multy = multy * 3; //multy *= 3;
-
-console.log(multy); //30
-
+    console.log(startjs);
