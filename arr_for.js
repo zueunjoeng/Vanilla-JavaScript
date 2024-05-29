@@ -25,3 +25,17 @@ let count =10;
     console.log(count); //113
 
 
+let counting =10;
+    counting -=100; //-90
+    counting -=1; //1 //-= 라면 -91이 된다.
+    --counting; //0  //-92
+    counting--; //0  //-92
+
+    console.log(counting); //-1 //-93
+
+    
+let multy = 10;
+    multy = multy * 3; //multy *= 3;
+
+console.log(multy); //30
+
