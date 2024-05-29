@@ -18,7 +18,7 @@ for(var i = 0; i < 5; i++ ){
 
 let count =10;
     count +=100;
-    count +=1; //111
+    count +=1; //111 //주의할 점 : +가 빠지면 count=1; 되기떄문에 다시 1부터 연산이 시작된다.
     ++count; //112
     count++; //112
 
