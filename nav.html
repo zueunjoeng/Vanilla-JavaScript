@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+
+<body>
+    <ul id="gnb">
+        <li></li>
+    </ul>
+    <script>
+
+        const nav_data=[
+            {
+                gnb_li_a: "회사소개",
+                gnb_li_href:"./company.html"
+            },
+
+            {
+                gnb_li_a: "제품소개",
+                gnb_li_href:"./product.html"
+            },
+
+            {
+                gnb_li_a: "커뮤니티",
+                gnb_li_href:"./board.html"
+            }
+        ]
+        //    document.querySelector("#gnb").innerHTML = `
+        //                                             <li>${nav_data[0].gnb_li_a}</li>
+        //                                             <li>${nav_data[1].gnb_li_a}</li>
+        //                                             <li>${nav_data[2].gnb_li_a}</li>`;
+
+            document.querySelector("#gnb").innerHTML = `
+                                                <li>
+                                                    <a href="${nav_data[0].gnb_li_href}">
+                                                        ${nav_data[0].gnb_li_a}
+                                                    </a>
+                                                </li>
+                                                <li><a href="${nav_data[1].gnb_li_href}">${nav_data[1].gnb_li_a}</a></li>
+                                                <li><a href="${nav_data[2].gnb_li_href}">${nav_data[2].gnb_li_a}</a></li>`
+    </script>
+</body>
+</html>
