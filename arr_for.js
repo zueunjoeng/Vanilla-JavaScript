@@ -33,6 +33,7 @@ const nav_data=[
     //console.log(nav_data[1].gnb_li_href);
     //console.log(nav_data[1]["gnb_li_href"]); //object를 array처럼 표현하는 방법 ->키를 상수로 인식시킨다. /리액트에서 사용하는 방법.
     
+
     let mygnb=""; //null를 넣던, 빈칸을 넣던 똑같다.
     for(let liea =0; liea < 4; liea++){ // liea < 4 가 아니라 nav_data.length;로 하면 오류없이 출력됨
         mygnb += nav_data[liea].gnb_li_href;
