@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 태그에 데이터 저장</title>
+</head>
+
+<body>
+    <p data-txt="html 태그에 데이터를 저장한 것임"
+    data-cls="d-flex position-absolute">여기 글자 수정해줘</p> <!--p다음에 data-(글자-변수명)-->
+    <script>
+        const ptag = document.querySelector("p")
+        ptag.innerHTML = ptag.dataset.txt;
+        ptag.classList= ptag.dataset.cls;
+    </script>
+
+<div id="box" style="display:inline-block">
+    버튼을 클릭해보세요.
+</div>
+<div class="btns">
+  <button data-bg="red" data-text="빨강색">1</button>
+  <button data-bg="yellow" data-text="노랑색">2</button>
+  <button data-bg="blue" data-text="파랑색">3</button>
+  <button data-bg="#ddccff" data-text="특정색">4</button>
+</div>
+
+<script>
+  const targetbox = document.getElementById("box"); 
+  const btns = document.querySelectorAll(".btns button") 
+  btns.forEach(function(ele, idx){
+        //console.log("태그", ele, "순번", idx)
+        ele.addEventListener('click', function(){
+            console.log(this)
+            targetbox.innerHTML = this.dataset.text;
+            targetbox.style.backgroundColor = this.dataset.bg;
+        }) 
+        
+
+  }) 
+  // btns.forEach(function(ele(요소), idx(숫자)){})
+</script>
+</body>
+</html>
