@@ -99,8 +99,25 @@ window.onload = function(){
     let navitag="";
 
     for(x in hd_yys.gnb){
-        navitag += `<li><a href='${hd_yys.gnb[x].href}'>${hd_yys.gnb[x].Text}</a></li>`;
+        navitag += `<li class="${hd_yys.gnb[x].cls[0]}">
+            <a href='${hd_yys.gnb[x].href}' class="${hd_yys.gnb[x].cls[1]}">
+            ${hd_yys.gnb[x].Text}</a>`;
+
+        navitag +=`<ul>`;
+            for(j in hd_yys.gnb[x].gnb_ul_li ){
+                navitag +=`<li>
+                    <a href='${hd_yys.gnb[x].gnb_ul_li[j].href}'>
+                        ${hd_yys.gnb[x].gnb_ul_li[j].Text}
+                    </a>
+                    </li>`;
+            }
+
+        navitag +=`</ul>`;
+        navitag += `</li>`;
+
     }
 
     document.querySelector("#gnb").innerHTML = navitag;
 }
+
+//   for(var x=0; x<gnb_ul_li.length; x++){navitag += }
