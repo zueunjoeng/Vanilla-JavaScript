@@ -14,5 +14,20 @@ for(var i =1; i<5; i++){
     count +=`${i}마침\n`
 }
 
-console.log(count)
+console.log(count);
 
+const day = ["one", "two", "three", "four", "five"];
+
+let ch ="";
+
+for(var c=1; c<5; c++){
+    ch +=`${c}달\n`
+
+    for(k in day){
+        ch += `${day[k]}일\n`
+    };
+
+    ch +=`${c}마침`
+}
+
+console.log(ch);
