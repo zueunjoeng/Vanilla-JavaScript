@@ -91,6 +91,16 @@ const hd_yys ={
 }
 
 window.onload = function(){
-    document.querySelector("#gnb li").innerHTML = `<a href ="${hd_yys["gnb"][0].href}">${hd_yys["gnb"][0].Text}</a>`
-    document.querySelector("#hd .util li").innerHTML = `<a href ="${hd_yys["util"][1].href}">${hd_yys["util"][1].Text}</a>`
+    //onload는 화면이 로딩이 끝나면 실행되는 이벤트
+    //addEventListener와의 차이를 꼭 기록해둔다
+    //onload 이벤트는 딱 한번 실해된다. 주의
+    // 만약 2번쓰면 하나는 안된다.
+
+    let navitag="";
+
+    for(x in hd_yys.gnb){
+        navitag += `<li><a href='${hd_yys.gnb[x].href}'>${hd_yys.gnb[x].Text}</a></li>`;
+    }
+
+    document.querySelector("#gnb").innerHTML = navitag;
 }
