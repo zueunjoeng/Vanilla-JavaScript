@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNB, LNB, CNB</title>
+    <style>
+         .d-none{
+            display: none;
+         }
+         .on a{
+            color:red;
+         }
+         #tab{
+            display: flex;
+         }
+
+    </style>
+    <script src="./tab.js"></script>
+   
+</head>
+<body>
+    <ul id ="tab">
+        <li class="notice on"><a href="#notice">공지사항</a></li> 
+        <!-- 버튼이 아니라 a태그로 하면 접근성을 지킬 수 있다. -->
+        <li class="gallery"><a href="#gallery">갤러리</a></li>
+        <li class="qna"><a href="#qna">QNA</a></li>
+    </ul>
+    
+    <div class="content">
+        <div id="notice">
+            공지사항 콘텐츠
+        </div>
+        <div id="gallery" class="d-none">
+            갤러리 콘텐츠
+        </div>
+        <div id="qna" class="d-none">
+            문의콘텐츠
+        </div>
+    </div>
+
+</body>
+</html>
